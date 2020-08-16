@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION</title>
+<link rel="stylesheet" type="text/css" href="abc/style.css">
+	<script type="text/javascript">
+function valid()
+{
+var uname = document.forms["myform"]["fullname"].value;
+
+
+
+if(uname==""){
+	alert("Fullname Can't Be Empty");
+return false;
+
+}
+
+
+
+if(uname.length<3){
+	alert("Username Can't Be Less Than 3 Letters");
+return false;
+
+}
+
+
+
+
+var password = document.forms["myform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+
+if(password.length<6){
+	alert("Password Can't Be Less Than 6 Characters or Digits");
+return false;
+
+}
+
+
+
+
+
+var username = document.forms["myform"]["username"].value;
+if(username==""){
+	alert("username Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+
+
+
+var type = document.forms["myform"]["type"].value;
+
+if(type==""){
+	alert("Type Can't Be Empty");
+return false;
+
+}
+v
+
+
+
+
+
+}
+</script>
+
+</head>
+<body>
+
+
+			
+	<fieldset>
+	
+	<form name="myform" onsubmit="return valid()" method="POST">
+	
+		<center><h1>REGISTRATION</h1></center>
+		
+		<
+		
+		<br/><br/>	
+		<table>	
+		<tr>
+		<td><b>Fullname</b></td>
+		<td><input type="text" name="fullname" value=""></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+		<tr>
+		<td><b>mobile</b></td>
+		<td><input type="text" name="mobile" value=""></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+		<tr>
+			<td><b>Password</b></td>
+			<td><input type="password" name="password" value=""></td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			</tr>
+		<tr>	
+		<td><b>UsernAME</b></td>
+		<td><input type="text" name="username" value=""></td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+		</tr>
+				
+			
+	
+			
+			
+			
+				<tr><td><b>User Type	</b></td>	
+				<td><input type="radio" name="type" value="admin">Admin
+						<input type="radio" name="type" value="employee" />employee
+						
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						</td></tr>
+				<tr>
+				<tr>
+	
+				<td> </td>
+				<td><input type="submit" name="submit" value="Sign Up">
+				<input type="reset" name="reset" value="reset">
+				<a href="/login">Login</a>	</td>
+				
+				<td> </td>
+				<td> </td>
+				<td> </td>
+			</tr>
+	</table>
+	</form>
+	</fieldset>
+</body>
+</html>

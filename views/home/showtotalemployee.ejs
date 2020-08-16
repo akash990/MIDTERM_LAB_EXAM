@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Total employee list</title>
+		
+	<style type="text/css">	
+	table{
+	border-collapse: collapse;
+	width: 100%;
+	color: #e53489;
+	font-family: monospace;
+	font-size: 25px;
+	text-align: left;
+	}
+	th{
+		background-color: #e53489;
+		color: white;
+		}
+		tr:nth-child(even) {background-color: #f2f2f2;}
+ 
+</style>
+</head>
+<body>
+		<form>
+			<fieldset>
+				<legend><h1>Userlist</h1></legend>
+				<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Fullname</th>
+			<th>mobile</th>
+            <th>password</th>
+            <th>type</th>
+			<th>Action</th>
+			
+			
+		</tr>
+
+		<% for(var i=0; i < userList.length; i++){ %>
+		<tr>
+			<td><%= userList[i].id %></td>
+			<td><%= userList[i].fullname %></td>
+			<td><%= userList[i].mobile %></td>
+			<td><%= userList[i].password %></td>
+			<td><%= userList[i].type %></td>
+			<td><a href="/home/adduser/showtotalemployee/empupdate/<%= userList[i].id %>">Update</a> | <a href="/home/adduser/showtotalemployee/empdelete/<%= userList[i].id %>"> DELETE </a></td>
+			
+			
+			</tr>
+		<% } %>
+	</table><br/>
+				
+				<a href="/home/adduser">Back</a>
+				
+			</fieldset>
+			
+		</form>
+</body>
+</html>

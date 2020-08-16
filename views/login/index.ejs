@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script type="text/javascript">
+function validate()
+{
+	var name = document.forms["logform"]["uname"].value;
+if(name==""){
+	alert("Username Can't Be Empty");
+return false;
+
+}
+var password = document.forms["logform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+	
+	
+}
+</script>
+</head>
+<body>
+		<form name="logform" onsubmit="return validate()" method="POST">
+			<fieldset>
+				
+				<table bgcolor="#43c1d0" width="80%" height="500px" align="center" >
+
+		<tr width="50%">
+					
+		
+					
+		</tr>
+		<tr width="10%">
+        <td width="" align="center">Username: <br/><input size = "21" type="text" name="uname" placeholder="Please Enter Your Name" value="" /><div id="nname" class="val"></div></td>
+
+				</tr>
+				<tr width="10%">
+					<td width="" align="center">Password: <br/><input size = "21" type="password" name="password" placeholder="Enter Password"/><div id="password" class="val"></div></td>
+				</tr>	
+				<tr width="10%">
+                    <td width = ""align="center"></br><input type="Submit" value="Log in" name="submit"/></td>
+                 </tr>
+				<tr>				 
+					<td align="center"> Have no account?<a href="/registration">Register now !</a></td>
+
+                </tr>
+				
+					
+					
+				</tr>
+				</tr>	
+				</table>
+			</fieldset>
+		</form>
+</body>
+</html>

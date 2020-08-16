@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE Student's info</title>
+	<script type="text/javascript">
+function valid()
+{
+var name = document.forms["empform"]["uname"].value;
+
+
+
+if(name==""){
+	alert("Username Can't Be Empty");
+return false;
+
+}
+
+
+
+if(name.length<3){
+	alert("Username Can;t Be Less Than 3 Letters");
+return false;
+
+}
+
+
+else{
+for(i=0;i<name.length;i++)
+{ch=name.charAt(i);
+if(!(ch>='a'&&ch<='z')&&!(ch>='A'&&ch<='Z')&&!(ch>='0'&&ch<='9'))
+{
+
+	alert("Username Can't Contain Special Characters");
+	
+}
+}
+}
+
+var password = document.forms["empform"]["password"].value;
+
+if(password==""){
+	alert("Password Can't Be Empty");
+return false;
+
+}
+
+if(password.length<6){
+	alert("Password Can't Be Less Than 6 Characters or Digits");
+return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+var mobile = document.forms["empform"]["mobile"].value;
+
+if(mobile==""){
+	alert("Gender Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+var type = document.forms["empform"]["type"].value;
+
+if(type==""){
+	alert("Type Can't Be Empty");
+return false;
+
+}
+
+
+
+
+
+
+}
+</script>
+
+
+</head>
+<body>
+	<div>
+		<h1>UPDATE PROFILE</h1> 		
+	</div>
+
+	
+
+	<form name="empform" onsubmit="return valid()" method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><input type="text" readonly name="id" value="<%=user.id%>"></td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="uname" value="<%=user.fullname%>"></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="text" name="password" value="<%=user.password%>"></td>
+			</tr>
+			<tr>
+			<td>Mobile :</td>
+				<td><input type="text" name="mobile" value="<%=user.mobile%>"></td>
+			<tr>
+			
+			<tr>
+			
+			<tr>
+			
+				<td>Type :</td>
+				<td><input type="text" name="type" value="<%=user.type%>"></td>
+			</tr>
+			<tr>
+				
+				<td><input type="submit" name="submit" value="Update this employee info"></td>
+				<td><a href="/home/adduser/showtotalemployee">Show employee information</a></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
